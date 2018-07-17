@@ -1,0 +1,39 @@
+.header_user_info {
+  float: right;
+}
+.header_user_info ul {
+  margin: 0;
+  padding: 0;
+}
+.header_user_info ul li {
+  float: left;
+}
+.header_user_info ul li a {
+  color: #7f7355;
+  display: block;
+  padding: 8px 9px 11px 8px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .header_user_info ul li a {
+    padding: 5px 9px 5px 8px;
+  }
+}
+.header_user_info ul li a.account {
+  color: #ffa145;
+}
+.header_user_info ul li a:hover, .header_user_info ul li a.active {
+  color: #ffa145;
+}
+@media (max-width: 767px) {
+  .header_user_info ul li {
+    float: none;
+    display: inline-block;
+  }
+}
+@media (max-width: 767px) {
+  .header_user_info {
+    text-align: center;
+    width: 100%;
+  }
+}
