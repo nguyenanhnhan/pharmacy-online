@@ -4,7 +4,13 @@ html{
 	overflow-x:hidden;
 }
 body{
-	font:400 14px/1.5em "Arial","sans-serif";
+	/*font:400 14px/1.5em "Arial","sans-serif";*/
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.8em;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-family: 'IBM Plex Sans', sans-serif;
 	color:#595959;
 	background-attachment: fixed;
 }
@@ -20,7 +26,7 @@ body{
 .second_font,
 table td[data-cell-title]::before,
 [class*="first_letter"]:first-letter{
-	font-family: 'Montserrat', serif;
+	font-family: 'IBM Plex Sans', serif;
 }
 ::selection{
 	background:#09a2b0;
@@ -163,7 +169,7 @@ blockquote.type_2::after{
 	display: block;
 	text-align: center;
 	font-weight: 600;
-	font-family: 'Montserrat', serif;
+	font-family: 'Raleway', serif;
 	margin: 10px 13px 0 0;
 }
 .first_letter_type_1 span{
@@ -246,17 +252,17 @@ a:not([class*="tr_"]){
 /* Typography */
 
 h1,.fs_big_2{
-	font-size:2.142em;
+	font-size:2.242em;
 }
 h2,h3{
-	font-size:1.714em;
+	font-size:1.814em;
 }
 h4,
 .fs_big_4{
-	font-size:1.4285em;
+	font-size:1.5285em;
 }
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'IBM Plex Sans', sans-serif;
 	line-height: 1em;
 	letter-spacing: -1px;
 }
@@ -276,33 +282,33 @@ b,.fw_bold{
 	font-weight: 700;
 }
 sup{
-	font-size:.79em;
+	font-size:.89em;
 	display: inline-block;
 	margin:7px 0 0 2px;
 }
 .fs_ex_small{
-	font-size:0.7857em;
+	font-size:0.8857em;
 }
 .fs_small,small{
-	font-size:.86em;
+	font-size:.96em;
 }
 .fs_medium{
-	font-size:.929em;
+	font-size:1.1em;
 }
 .fs_large_0{
-	font-size:1.075em;
+	font-size:1.175em;
 }
 h5,h6,.fs_large{
-	font-size:1.145em;
+	font-size:1.245em;
 }
 .fs_ex_large{
-	font-size:1.32em;
+	font-size:1.42em;
 }
 .fs_big{
-	font-size:1.4em;
+	font-size:1.5em;
 }
 .fs_big_3{
-	font-size:2.6em;
+	font-size:2.7em;
 }
 .lh_small{
 	line-height:1.2em;
@@ -320,7 +326,7 @@ h5,h6,.fs_large{
 /* Colors */
 
 .color_default{
-	color:#595959;
+	color:#141823;
 }
 .bg_grey_light,
 .ui-slider-handle,

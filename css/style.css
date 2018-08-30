@@ -44,7 +44,9 @@
 
 @import "styleswitcher.css";
 
+@import "font.css";
 
+@import "flag-icon.css";
 
 /* 1. Header */
 
@@ -774,9 +776,9 @@
 
 .button_type_8{
 
-	width:38px;
+	width:44px;
 
-	height:38px;
+	height:44px; /*38px*/
 
 }
 
@@ -1610,7 +1612,7 @@ table td{
 
 	padding:15px 20px 20px;
 
-	width:262px;
+	width:282px;
 
 }
 
@@ -1638,7 +1640,7 @@ table td{
 
 .total_title{
 
-	width:70px;
+	width:90px;
 
 }
 
@@ -2802,7 +2804,7 @@ input[type="checkbox"] + label::after,
 
 .quantity > *{
 
-	height:38px;
+	height:44px; /*38px*/
 
 }
 
