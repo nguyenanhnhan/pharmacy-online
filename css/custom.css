@@ -14,10 +14,8 @@
 }
 .product_flag{
 	position:absolute; 
-	/*background: rgba(34,34,38,.5);*/
 	right: -8px; 
 	top:-8px; 
-	/*width: 34px;*/
 	height:30px; 
 	z-index:3; 
 	-webkit-backface-visibility:hidden;
