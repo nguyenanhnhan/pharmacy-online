@@ -28,8 +28,8 @@
 
 .frame_container::before {
 	content:"";
-  	display:block;
-  	position: absolute;
+	display:block;
+	position: absolute;
 	border:1px solid #e5e5e5;
 	right:0px;
 	left:0px;
