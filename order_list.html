@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Drug Store - Order list</title>
+        <meta charset="utf-8">
+        <!--add responsive layout support-->
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!--meta info-->
+        <meta name="author" content="">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <!--include favicon-->
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="images/fav.png"> -->
+        <link rel="shortcut icon" type="image/x-icon" href="images/logos/fav.png">
+        <!--fonts include-->
+        <!-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=vietnamese' rel='stylesheet' type='text/css'> -->
+        <!--stylesheet include-->
+        <link rel="stylesheet" type="text/css" media="all" href="plugins/owl-carousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="plugins/jackbox/css/jackbox.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/custom.css">
+        <!--[if lte IE 10]><link rel="stylesheet" type="text/css" media="screen" href="css/ie.css"><![endif]-->
+        <!--head libs-->
+        <!--[if lte IE 8]>
+            <style>
+                #preloader{display:none !important;}
+            </style>
+        <![endif]-->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/modernizr.js"></script>
+    </head>
+    <body class="sticky_menu">
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <div id="preloader"></div>
+        <!--layout-->
+        <div class="wide_layout db_centered bg_white">
+            <!--[if (lt IE 9) | IE 9]>
+                <div class="bg_red" style="padding:5px 0 12px;">
+                <div class="container" style="width:1170px;"><div class="row wrapper"><div class="clearfix color_white" style="padding:9px 0 0;float:left;width:80%;"><i class="fa fa-exclamation-triangle f_left m_right_10" style="font-size:25px;"></i><b>Attention! This page may not display correctly.</b> <b>You are using an outdated version of Internet Explorer. For a faster, safer browsing experience.</b></div><div class="t_align_r" style="float:left;width:20%;"><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode" class="button_type_1 d_block f_right lbrown tr_all second_font fs_medium" target="_blank" style="margin-top:6px;">Update Now!</a></div></div></div></div>
+            <![endif]-->
+            <header role="banner" class="w_inherit">
+                <!--top part-->
+                <div class="header_top_part">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 fs_small color_default fw_normal t_xs_align_c">
+                                <b class="scheme_color">Giao hàng miễn phí</b> với các hóa đơn trên 1,000,000 đ. Cần giúp đỡ? <b class="scheme_color">0903.123.456</b>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 t_align_r t_xs_align_c">
+                                <!--shop nav-->
+                                <nav class="d_inline_b">
+                                    <ul class="hr_list second_font si_list fs_small">
+                                        <li><a class="sc_hover tr_delay" href="page_my_account.html">Tài khoản</a></li>
+                                        <li><a class="sc_hover tr_delay" href="orders_list.html">Danh sách đặt hàng</a></li>
+                                        <li><a class="sc_hover tr_delay" href="wishlist.html">Sản phẩm quan tâm</a></li>
+                                        <li><a class="sc_hover tr_delay" href="checkout.html">Thanh toán</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="header_middle_part t_xs_align_c">
+                    <div class="container">
+                        <div class="d_table w_full d_xs_block">
+                            <div class="col-lg-4 col-md-4 col-sm-4 d_table_cell d_xs_block f_none v_align_m m_xs_bottom_15">
+                                <!--logo-->
+                                <a href="#" class="d_inline_b">
+                                    <img src="images/logos/logo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 d_table_cell d_xs_block f_none v_align_m">
+                                <div class="clearfix">
+                                    <div class="clearfix f_right f_xs_none d_xs_inline_b m_xs_bottom_15 t_xs_align_l">
+                                        <!--login-->
+                                        <div class="f_right m_right_3 relative transform3d">
+                                            <button class="button_type_1 tr_all second_font color_dark grey state_2" data-open-dropdown="#login"><i class="fa fa-user d_inline_m m_right_5"></i> <span class="fs_small">Đăng nhập</span></button>
+                                            <div id="login" data-show="fadeInUp" data-hide="fadeOutDown" class="dropdown bg_grey_light login_dropdown animated">
+                                                <form class="m_bottom_15">
+                                                    <ul>
+                                                        <li class="m_bottom_15">
+                                                            <label for="username" class="second_font m_bottom_4 d_inline_b fs_medium">Email</label>
+                                                            <input type="text" name="" id="username" class="w_full tr_all">
+                                                        </li>
+                                                        <li class="m_bottom_20">
+                                                            <label for="password" class="second_font m_bottom_4 d_inline_b fs_medium">Mật khẩu</label>
+                                                            <input type="password" name="" id="password" class="w_full tr_all">
+                                                        </li>
+                                                        <li class="m_bottom_20">
+                                                            <input type="checkbox" name="" id="remember_me">
+                                                            <label for="remember_me" class="second_font fs_medium">Ghi nhớ cho lần sau</label>
+                                                        </li>
+                                                        <li>
+                                                            <button class="t_align_c tt_uppercase w_full second_font d_block fs_medium button_type_2 lbrown tr_all">Đăng nhập</button>
+                                                        </li>
+                                                    </ul>
+                                                </form>
+                                                <div class="m_bottom_14 t_align_c">
+                                                    <a href="#" class="second_font sc_hover fs_small">Lấy lại mật khẩu?</a><br>
+                                                    <!-- <a href="#" class="second_font sc_hover fs_small">Forgot your username?</a> -->
+                                                </div>
+                                                <hr class="divider_white m_bottom_25">
+                                                <h5 class="color_dark tt_uppercase second_font t_align_c m_bottom_15 fw_light">Bạn chưa có Tài khoản?</h5>
+                                                <a href="#" role="button" class="button_type_2 tt_uppercase fs_medium second_font d_block t_align_c black state_2">Tạo tài khoản mới</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--searchform-->
+                                    <form role="search" class="relative f_right f_xs_none m_right_3 db_xs_centered button_in_input">
+                                        <input type="text" name="" tabindex="1" placeholder="Tìm kiếm" class="fs_medium color_light fw_light w_full tr_all">
+                                        <button class="color_dark tr_all color_lbrown_hover"><i class="fa fa-search d_inline_m"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header_bottom_part bg_white w_inherit">
+                    <div class="container">
+                        <hr class="divider_black">
+                        <div class="row">
+                            <div class="col-lg-10 col-md-10">
+                                <button id="mobile_menu_button" class="vc_child d_xs_block db_xs_centered d_none m_bottom_10 m_top_15 bg_lbrown color_white tr_all"><i class="fa fa-navicon d_inline_m"></i></button>
+                                <!--main menu-->
+                                <nav role="navigation" class="d_xs_none main_menu_nav" style="margin-left: 2px">
+                                    <ul class="main_menu relative hr_list second_font fs_medium fw_medium">
+                                        <li class="current">
+                                            <a href="home.html" class="tt_uppercase tr_delay "><i class="fa fa-home" style="font-size: 1em"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="home.html" class="tt_uppercase tr_delay">Thuốc kê đơn 
+                                                <i class="fa fa-caret-down tr_inherit d_inline_m m_left_5 m_md_left_2"></i>
+                                            </a>
+                                            <!--sub menu (second level)-->
+                                            <ul class="sub_menu bg_grey_light tr_all">
+                                                <li><a href="#">Mua thuốc theo toa</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="tt_uppercase tr_delay">DANH MỤC SẢN PHẨM 
+                                                <i class="fa fa-caret-down tr_inherit d_inline_m m_left_5"></i>
+                                            </a>
+                                            <!--sub menu (second level)-->
+                                            <ul class="sub_menu bg_grey_light tr_all">
+                                                <li><a href="#">Dược phẩm</a></li>
+                                                <li><a href="#">Mỹ phẩm</a></li>
+                                                <li><a href="#">Thực phẩm chức năng</a></li>
+                                                <li><a href="#">Dụng cụ và thiết bị y tế</a></li>
+                                                <li><a href="#">Sản phẩm sức khoẻ khác</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="tt_uppercase tr_delay">PHÒNG KHÁM CHUYÊN KHOA </a>
+                                        </li>
+                                        <li><a href="contact_pharm.html" class="tt_uppercase tr_delay">LIÊN HỆ</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-lg-2 col-md-2 clearfix t_sm_align_c">
+                                <ul class="hr_list si_list shop_list f_right f_sm_none d_sm_inline_b t_sm_align_l">
+                                    <!--shopping cart-->
+                                    <li class="relative open_mini_shopping_cart" style="right:15px">
+                                        <button class="color_dark active_lbrown tr_all" data-open-dropdown="#shopping_cart">
+                                            <i class="fa fa-shopping-cart fs_large"></i><sup>3</sup>
+                                            <b class="second_font fs_small d_inline_b m_left_10">200.000 đ</b>
+                                        </button>
+                                        <div id="shopping_cart" data-show="fadeInUp" data-hide="fadeOutDown" class="bg_grey_light dropdown animated">
+                                            <div class="sc_header fs_small fw_light">Giỏ hàng</div>
+                                            <hr class="divider_white">
+                                            <ul class="shopping_cart_list m_bottom_4">
+                                                <li class="relative">
+                                                    <div class="clearfix lh_small">
+                                                        <!-- <a href="#" class="f_left m_right_10 d_block"><img src="images/sc_img_1.jpg" alt=""></a> -->
+                                                        <a href="#" class="f_left m_right_10 d_block"><img src="images/80x80_img1.jpg" alt="" style="width: 60px; height: 60px"></a>
+                                                        <a href="#" class="fs_medium second_font color_dark sc_hover d_block m_bottom_4">Cursus eleifend elit aenean</a>
+                                                        <p class="fs_medium">2 x <b class="color_dark">40.000 đ</b></p>
+                                                        <ul class="fw_light fs_small lh_small">
+                                                            <li>Đơn vị tính: <span class="color_dark">Hộp</span></li>
+                                                            <!-- <li>Color: <span class="color_dark">Red</span></li> -->
+                                                        </ul>
+                                                    </div>
+                                                    <hr class="divider_white m_top_15 m_bottom_0">
+                                                    <span class="close fs_small color_light tr_all color_dark_hover fw_light">x</span>
+                                                </li>
+                                                <li class="relative">
+                                                    <div class="clearfix lh_small">
+                                                        <!-- <a href="#" class="f_left m_right_10 d_block"><img src="images/sc_img_2.jpg" alt=""></a> -->
+                                                        <a href="#" class="f_left m_right_10 d_block"><img src="images/80x80_img2.jpg" alt="" style="width: 60px; height: 60px"></a>
+                                                        <a href="#" class="fs_medium second_font color_dark sc_hover d_block m_bottom_4">Auctor wisi et urna</a>
+                                                        <p class="m_bottom_4 fs_medium">1 x <b class="color_dark">90.000 đ</b></p>
+                                                        <ul class="fw_light fs_small lh_small">
+                                                            <li>Đơn vị tính: <span class="color_dark">Hộp</span></li>
+                                                            <!-- <li>Color: <span class="color_dark">Red</span></li> -->
+                                                        </ul>
+                                                    </div>
+                                                    <hr class="divider_white m_top_15 m_bottom_0">
+                                                    <span class="close fs_small color_light tr_all color_dark_hover fw_light">x</span>
+                                                </li>
+                                                <li class="relative">
+                                                    <div class="clearfix lh_small">
+                                                        <!-- <a href="#" class="f_left m_right_10 d_block"><img src="images/sc_img_3.jpg" alt=""></a> -->
+                                                        <a href="#" class="f_left m_right_10 d_block"><img src="images/80x80_img3.jpg" alt="" style="width: 60px; height: 60px"></a>
+                                                        <a href="#" class="fs_medium second_font color_dark sc_hover d_block m_bottom_4">Aliquam erat volut</a>
+                                                        <p class="fs_medium">1 x <b class="color_dark">30.000 đ</b></p>
+                                                        <ul class="fw_light fs_small lh_small">
+                                                            <li>Đơn vị tính: <span class="color_dark">Hộp</span></li>
+                                                            <!-- <li>Color: <span class="color_dark">Red</span></li> -->
+                                                        </ul>
+                                                    </div>
+                                                    <hr class="divider_white m_top_15 m_bottom_0">
+                                                    <span class="close fs_small color_light tr_all color_dark_hover fw_light">x</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="fs_medium second_font color_dark m_bottom_15">
+                                                <li><span class="d_inline_b total_title">Thuế:</span><span class="fw_light">0 đ</span></li>
+                                                <li><span class="d_inline_b total_title">Giảm giá:</span><span class="fw_light">0 đ</span></li>
+                                                <li><b><span class="d_inline_b total_title">Tổng tiền:</span>200.000 đ</b></li>
+                                            </ul>
+                                            <a href="shopping_cart.html" role="button" class="button_type_2 tt_uppercase fs_medium second_font d_block t_align_c black state_2 m_bottom_5">Xem giỏ hàng</a>
+                                            <a href="check_out.html" role="button" class="t_align_c tt_uppercase w_full second_font d_block fs_medium button_type_2 lbrown tr_all">Thanh toán</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--breadcrumbs-->
+            <div class="breadcrumbs bg_grey_light_2 fs_medium fw_light">
+                <div class="container color_dark">
+                    <a href="index.html" class="sc_hover">Trang chủ</a> / <span class="color_light">Danh sách đơn hàng</span>
+                </div>
+            </div>
+            <!--main content-->
+            <div class="page_section_offset">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-lg-3 col-md-3 col-sm-3 p_top_4">
+                            <!--categories widget-->
+                            <section class="m_bottom_30 animated hidden" data-animation="fadeInDown">
+                                <h5 class="color_dark tt_uppercase second_font fw_medium m_bottom_13">Danh mục sản phẩm</h5>
+                                <hr class="divider_bg m_bottom_23">
+                                <ul class="categories_list second_font w_break">
+                                    <li class="relative"><a href="#" class="fs_large_0 d_inline_b">Dược phẩm</a><button class="open_sub_categories fs_medium"></button>
+                                        <!--second level-->
+                                        <ul class="d_none">
+                                            <li class="relative"><a href="#" class="tr_delay d_inline_b">Tiêu hoá</a></li>
+                                            <li class="relative"><a href="#" class="tr_delay d_inline_b">Tuần hoàn</a></li>
+                                            <li class="relative"><a href="#" class="tr_delay d_inline_b">Tim mạch</a></li>
+                                            <li class="relative"><a href="#" class="tr_delay d_inline_b">Nội thần kinh</a></li>
+                                            <li class="relative"><a href="#" class="tr_delay d_inline_b">Ngoại thần kinh</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative"><a href="#" class="fs_large_0 d_inline_b">Mỹ phẩm</a>
+                                    </li>
+                                    <li class="relative"><a href="#" class="fs_large_0 d_inline_b">Thực phẩm chức năng</a><button class="open_sub_categories fs_medium"></button>
+                                        <!--second level-->
+                                        <ul class="d_none">
+                                            <li class="relative"><a href="#" class="tr_delay d_inline_b">Bổ xương khớp</a><!-- <button class="open_sub_categories fs_medium"></button> -->
+                                                <!--third level-->
+                                                <!-- <ul class="d_none fs_small categories_third_level_list">
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Beauty Clearance</a></li>
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Manicure &amp; Pedicure</a></li>
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Tools &amp; Accessories</a></li>
+                                                </ul> -->
+                                            </li>
+                                            <li class="relative"><a href="#" class="tr_delay d_inline_b">Chống lão hoá</a><!-- <button class="open_sub_categories fs_medium"></button> -->
+                                                <!--third level-->
+                                                <!-- <ul class="d_none fs_small categories_third_level_list">
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Blood Pressure Monitors</a></li>
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Incontinence Aids</a></li>
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Office chairs</a></li>
+                                                </ul> -->
+                                            </li>
+                                            <li class="relative"><a href="#" class="tr_delay d_inline_b">Hỗ trợ tim mạch</a><!-- <button class="open_sub_categories fs_medium"></button> -->
+                                                <!--third level-->
+                                                <!-- <ul class="d_none fs_small categories_third_level_list">
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Feminine Care</a></li>
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Hair Regrowth</a></li>
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Soaps &amp; Bodywash</a></li>
+                                                </ul> -->
+                                            </li>
+                                            <li class="relative"><a href="#" class="tr_delay d_inline_b">Tiểu đường</a><!-- <button class="open_sub_categories fs_medium"></button> -->
+                                                <!--third level-->
+                                                <!-- <ul class="d_none fs_small categories_third_level_list">
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Multivitamins</a></li>
+                                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Natural Vitamins</a></li>
+                                                </ul> -->
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li class="relative"><a href="#" class="fs_large_0 d_inline_b">Thực phẩm chức năng</a> -->
+                                    </li>
+                                    <li class="relative"><a href="#" class="fs_large_0 d_inline_b">Dụng cụ và Thiết bị y tế</a> </li>
+                                    <li class="relative"><a href="#" class="fs_large_0 d_inline_b">Sản phẩm sức khoẻ </a> </li>
+                                </ul>
+                            </section>
+                        </aside>
+                        <section class="col-lg-9 col-md-9 col-sm-9">
+                            <h2 class="fw_light second_font color_dark m_bottom_27 tt_uppercase">Danh sách đơn hàng</h2>
+                            <table class="w_full second_font orders_list_table">
+                                <thead class="bg_grey_light_2 d_xs_none">
+                                    <tr>
+                                        <th><b>Mã đơn hàng</b></th>
+                                        <th><b>Ngày ra đơn hàng</b></th>
+                                        <th><b>Trạng thái</b></th>
+                                        <th><b>Tổng tiền</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-cell-title="Order Number"><a href="#" class="sc_hover">4daf03</a></td>
+                                        <td data-cell-title="Order Date">27-03-2019</td>
+                                        <td data-cell-title="Order Status">Đã giao nhận xong</td>
+                                        <td data-cell-title="Total"><b class="scheme_color">200.000 đ</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-cell-title="Order Number"><a href="#" class="sc_hover">4daf04</a></td>
+                                        <td data-cell-title="Order Date">18-05-2019</td>
+                                        <td data-cell-title="Order Status">Đã giao nhận xong</td>
+                                        <td data-cell-title="Total"><b class="scheme_color">500.000 đ</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-cell-title="Order Number"><a href="#" class="sc_hover">4daf05</a></td>
+                                        <td data-cell-title="Order Date">18-06-2019</td>
+                                        <td data-cell-title="Order Status">Đã đóng gói, chờ gửi</td>
+                                        <td data-cell-title="Total"><b class="scheme_color">2.000.000 đ</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+            <footer role="contentinfo" class="p_top_0">
+                <div class="section_offset bg_grey_light_2 m_bottom_38">
+                    <div class="container m_bottom_13 m_top_10">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 m_xs_bottom_30">
+                                <h5 class="color_dark tt_uppercase second_font fw_medium m_bottom_13">Tweets Mới</h5>
+                                <hr class="divider_bg m_bottom_10">
+                                <!--twitter feed-->
+                                <div class="tweets_list_container"><p class="loading"><span class="fw_light">Loading tweets...</span></p></div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <h5 class="color_dark tt_uppercase second_font fw_medium m_bottom_13">Kết nối với chúng tôi</h5>
+                                <hr class="divider_bg m_bottom_30">
+                                <!--social buttons-->
+                                <ul class="hr_list">
+                                    <li class="m_right_3 m_bottom_3">
+                                        <a href="#" class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i class="fa fa-facebook fs_large d_inline_m"></i><span class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown" data-hide="fadeOutUp" style="margin-left: -40.5px;">Facebook</span></a>
+                                    </li>
+                                    <li class="m_right_3 m_bottom_3">
+                                        <a href="#" class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i class="fa fa-twitter fs_large d_inline_m"></i><span class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown" data-hide="fadeOutUp" style="margin-left: -33.5px;">Twitter</span></a>
+                                    </li>
+                                    <li class="m_right_3 m_bottom_3">
+                                        <a href="#" class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i class="fa fa-rss fs_large d_inline_m"></i><span class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown" data-hide="fadeOutUp" style="margin-left: -26px;">RSS</span></a>
+                                    </li>
+                                    <li class="m_right_3 m_bottom_3">
+                                        <a href="#" class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i class="fa fa-linkedin fs_large d_inline_m"></i><span class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown" data-hide="fadeOutUp" style="margin-left: -37px;">LinkedIn</span></a>
+                                    </li>
+                                    <li class="m_right_3 m_bottom_3">
+                                        <a href="#" class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i class="fa fa-envelope fs_large d_inline_m"></i><span class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown" data-hide="fadeOutUp" style="margin-left: -44px;">Contact Us</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
+                                    <h5 class="color_dark tt_uppercase second_font fw_medium m_bottom_13">Danh mục sản phẩm</h5>
+                                    <hr class="divider_bg m_bottom_25">
+                                    <ul class="second_font vr_list_type_1 with_links">
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Dược phẩm</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Mỹ phẩm</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Thực phẩm chức năng</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Dụng cụ và thiết bị y tế</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Sản phẩm sức khoẻ khác</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
+                                    <h5 class="color_dark tt_uppercase second_font fw_medium m_bottom_13">Dịch vụ</h5>
+                                    <hr class="divider_bg m_bottom_25">
+                                    <ul class="second_font vr_list_type_1 with_links">
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Tài khoản của tôi</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Lịch sử giao dịch</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Theo dõi đơn hàng</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Liên hệ nhà cung cấp</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
+                                    <h5 class="color_dark tt_uppercase second_font fw_medium m_bottom_13">Thông tin</h5>
+                                    <hr class="divider_bg m_bottom_25">
+                                    <ul class="second_font vr_list_type_1 with_links">
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Giới thiệu</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Quy định thanh toán</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Quy định vận chuyển và giao nhận</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Chính sách giải quyết khiêu nại</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Chính sách bảo mật</a></li>
+                                        <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i class="fa fa-caret-right"></i>Điều khoản sử dụng</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
+                                    <!-- <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Like Us On Facebook</h5>
+                                    <hr class="divider_bg m_bottom_15">
+                                    <div class="fb-page" data-href="https://www.facebook.com/kinokritik/" data-tabs="timeline" data-height="200px" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/kinokritik/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kinokritik/">Кинокритик</a></blockquote></div> -->
+                                    <h5 class="color_dark tt_uppercase second_font fw_medium m_bottom_13">Liên hệ với chúng tôi</h5>
+                                <hr class="divider_bg m_bottom_25">
+                                <p class="second_font m_bottom_15">Tầng 10, Cao ốc Yoko<br/> 41 Nguyễn Thị Minh Khai, P. Bến Nghé, Q.1, TP. Hồ Chí Minh</p>
+                                <ul class="second_font vr_list_type_2">
+                                    <li class="m_bottom_14"><i class="fa fa-phone color_dark fs_large"></i>090.3399.645</li>
+                                    <li ><i class="fa fa-envelope color_dark"></i><a href="mailto:#" class="sc_hover d_inline_b">info@alila.vn</a></li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="divider_black m_bottom_13">
+                    <div class="d_table w_full d_xs_block t_xs_align_c">
+                        <div class="col-lg-6 col-md-6 col-sm-6 color_light fw_medium f_none d_table_cell v_align_m d_xs_block m_xs_bottom_10">
+                            &copy; 2019 <a href="home.html" class="sc_hover">ALILA</a>. All Rights Reserved.
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 t_align_r t_xs_align_c f_none d_table_cell v_align_m d_xs_block">
+                            <ul class="hr_list d_inline_b">
+                                <li class="m_right_5"><img src="images/payment_1.jpg" alt=""></li>
+                                <li class="m_right_5"><img src="images/payment_2.jpg" alt=""></li>
+                                <li class="m_right_5"><img src="images/payment_3.jpg" alt=""></li>
+                                <li class="m_right_5"><img src="images/payment_4.jpg" alt=""></li>
+                                <li class="m_right_5"><img src="images/payment_5.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!--back to top-->
+        <button class="back_to_top animated button_type_6 grey state_2 d_block black_hover f_left vc_child tr_all"><i class="fa fa-angle-up d_inline_m"></i></button>
+        <button data-popup="#subscribe_popup" data-popup-transition-in="bounceInUp" data-popup-transition-out="bounceOutUp"></button>
+
+        <!--libs include-->
+        <script src="plugins/flexslider/jquery.flexslider-min.js"></script>
+        <script src="plugins/jquery.appear.js"></script>
+        <script src="plugins/jquery.elevateZoom-3.0.8.min.js"></script>
+        <script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
+        <script src="plugins/jquery.easytabs.min.js"></script>                                      
+        <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+        <script src="plugins/twitter/jquery.tweet.min.js"></script><script src="plugins/flickr.js"></script>
+        <script src="plugins/afterresize.min.js"></script>
+        <script src="plugins/jackbox/js/jackbox-packed.min.js"></script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid="></script>
+        <script src="js/retina.min.js"></script>
+        <script src="plugins/colorpicker/colorpicker.js"></script>
+        <script src="js/styleswitcher.js"></script>
+
+        <!--theme initializer-->
+        <script src="js/themeCore.js"></script>
+        <script src="js/theme.js"></script>
+    </body>
+</html>
